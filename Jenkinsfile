@@ -23,9 +23,9 @@ pipeline {
             			}
     	    		}
     	post {
-        // Clean after build
-        always {
-            cleanWs(cleanWhenNotBuilt: false,
+            // Clean after build
+            always {
+                cleanWs(cleanWhenNotBuilt: false,
                     deleteDirs: true,
                     disableDeferredWipeout: true,
                     notFailBuild: true,
