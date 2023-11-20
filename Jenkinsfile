@@ -9,7 +9,7 @@ pipeline {
             }
           stage('Cloning Git'){
             steps {
-              git([url: 'https://github.com/wdcs-jashshah/temp.git', branch: 'master'])
+              git([url: 'https://github.com/wdcs-jashshah/temp.git', branch: 'main'])
 
                   }
              }
