@@ -13,7 +13,7 @@ pipeline {
 
                   }
                                 }
-            stage('Build') {
+          stage('Build') {
                 steps {
                     // Clean before build
                     cleanWs()
