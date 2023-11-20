@@ -12,8 +12,8 @@ pipeline {
               git([url: 'https://github.com/wdcs-jashshah/temp.git', branch: 'main'])
 
                   }
-             }
-             stages {
+        }
+       stages {
         stage('Build') {
             steps {
                 // Clean before build
@@ -21,10 +21,10 @@ pipeline {
                 // We need to explicitly checkout from SCM here
                 checkout scm
                 echo "Building ${env.JOB_NAME}..."
-            }
-        }
-    }
-    post {
+            			}
+    	    		}
+    	}
+    	post {
         // Clean after build
         always {
             cleanWs(cleanWhenNotBuilt: false,
@@ -33,7 +33,7 @@ pipeline {
                     notFailBuild: true,
                     patterns: [[pattern: '.gitignore', type: 'INCLUDE'],
                                [pattern: '.propsfile', type: 'EXCLUDE']])
+            }
         }
     }
-}
 }
