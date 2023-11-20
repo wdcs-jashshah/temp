@@ -15,12 +15,6 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                // Your test steps go here
-            }
-        }
-
         stage('Test') {
             steps {
                 // Clean before build
@@ -32,8 +26,6 @@ pipeline {
         }
     }
 
-
-    
     post {
         always {
             cleanWs()
