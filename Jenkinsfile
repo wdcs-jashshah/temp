@@ -22,7 +22,7 @@ pipeline {
                     echo "Building ${env.JOB_NAME}..."
             			}
     	    		}
-    	post {
+        post {
             // Clean after build
             always {
                 cleanWs(cleanWhenNotBuilt: false,
