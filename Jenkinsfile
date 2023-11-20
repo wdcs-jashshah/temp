@@ -32,13 +32,8 @@ pipeline {
         }
     }
 
-        stage('Deploy') {
-            steps {
-                // Your deployment steps go here
-            }
-        }
-    }
 
+    
     post {
         always {
             cleanWs()
@@ -49,4 +44,5 @@ pipeline {
                 patterns: [[pattern: '.gitignore', type: 'INCLUDE'],
                            [pattern: '.propsfile', type: 'EXCLUDE']])
         }
+    }
 }
